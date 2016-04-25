@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Front-end Web Developer: Laura Culham
+  Site: http://lauraculham.com
+  Twitter: @laura_culham
+  Location: Toronto, ON Canada
+
+/* THANKS */
+  WordPress starter theme from HackerYou - http://hackeryou.com
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery
+  Software: WordPress

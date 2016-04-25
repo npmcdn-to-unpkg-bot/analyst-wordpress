@@ -1,0 +1,590 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+$black: rgb(0,0,0);
+$navy: rgb(58, 64, 77);
+$darkgrey: rgb(34, 39, 44);
+$midgrey: rgb(129, 129, 129);
+$lightgrey: rgb(226, 226, 226);
+$greyblue:rgb(214, 223, 233);
+$extralightgrey: rgb(245, 248, 250);
+$white:rgb(251, 251, 251);
+$lightblue: rgb(105, 176, 232);
+$extralightblue: rgb(229,238,240);
+
+$mainfont:'Poppins', sans-serif;
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+	display:block;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4rem;
+	font-family: $mainfont;
+	color: $midgrey;
+	background: $extralightgrey;
+}
+
+.wrapper {
+	max-width: 900px;
+	margin:0 auto;
+}
+
+section {
+	padding: 100px 0;
+}
+
+p {
+	font-weight: 300;
+}
+
+.con-top, .about-box, nav ul,  .banner-award,  .all-clients, .con-text, .modal-bottom{
+	display:flex;
+	flex-direction:row;
+}
+
+h1 {
+	line-height: 5rem;
+	font-size: 5.75rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	display:block;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+h3, h4 {
+	text-transform:uppercase;
+	font-weight: 500;
+}
+
+
+a button {
+		font-size: .875rem;
+		border:none;
+		margin: 20px 0;
+		background: $navy;
+		color:$white;
+		border: 3px solid $white;
+		transition: all.3s;
+		font-weight: 500;
+		padding: 5px 30px;
+		&:hover {
+				background: $white;
+				color: $navy;		
+		}
+	}
+
+div.button {
+		display:flex;
+		justify-content:center;
+	}
+
+
+header.con-top {
+	position:fixed;
+	width:100%;
+	z-index:1;
+	top:0px;
+	justify-content:space-between;
+	padding:0px 60px;
+	background: $extralightblue;
+	p, a{
+		color: black;
+		font-size: 1.4rem;
+		font-weight: 300;
+	}
+	i {
+		margin-right: 10px;
+		margin-left: 20px;
+
+	}
+
+	
+	.contact-info, .site-name{
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+	
+	}
+}
+
+
+div.main-nav {
+	z-index: 1;
+	padding: 0px 48px;
+	position:fixed;
+	display:flex;
+	flex-direction: row;
+	justify-content:flex-end;	
+	width:100%;
+	top:49px;
+	background: rgba(255,255,255,.9);
+	nav ul {
+		margin:0;
+		li {
+		list-style: none;
+		a{
+			text-decoration: none;
+			color:$midgrey;
+			text-align: right;
+			margin-left: 20px;
+			font-weight: 300;
+			font-size: .875rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition:all.3s;
+			&:hover {
+				color:black;
+				}
+			}
+		}
+	}
+}
+
+
+
+section.hero {
+	height:100vh;
+	color:$lightgrey;
+	position:relative;
+	background: rgba(34, 39, 44,.9);
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.9), rgba(255,255,255,.2)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top, rgba(0,0,0,.9), rgba(255,255,255,.2)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,.9), rgba(255,255,255,.2)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to top, rgba(0,0,0,.9), rgba(255,255,255,.2)); /* Standard syntax */
+	div.hero-text {
+	width: 50%;
+	}
+}
+
+section.hero:after {
+	 content: "";
+  	 position: absolute;
+	  background-image: url("images/P1010089.JPG");
+	  background-size: cover;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  z-index: -1;
+}
+
+.about-box {
+	justify-content:space-between;
+	.about-img {
+		width:50%;
+		box-shadow: 0 0 5px rgba(0,0,0,.15);
+	}
+	.about-right{
+		width:45%;
+		ul {
+			padding-left: 20px;
+		}
+		h3{
+			margin-top:0;
+			&:after {
+				content:"";
+				display:block;
+				background:$lightgrey;
+				width:100px;
+				height:5px;
+				margin-top:15px;
+			}
+		}
+		.about-right-p{
+			margin: 50px 0;
+		}
+	}
+}
+
+.banner-award {
+	color: $extralightblue;
+	background: rgb(58, 64, 77);
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.9), rgb(58, 64, 77)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(top, rgba(0,0,0,.9), rgb(58, 64, 77)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,.9), rgb(58, 64, 77)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to top, rgba(0,0,0,.9), rgb(58, 64, 77)); /* Standard syntax */
+	div {
+  	width:25%;
+  	padding:50px 0;
+  	text-align:center;
+  	i{
+  		font-size: 4rem;	
+  	}
+  	.title {
+  		font-size: 1.6rem;color:$lightgrey;
+  	}
+  	.year {
+  		font-size: 1.2rem;
+  		color:$midgrey;
+  	}
+  }
+}
+
+section.services {
+  position: relative;
+  box-shadow: 0 0 20px $midgrey;
+  &:after {
+	  content: "";
+	  position: absolute;
+	  background-image: url("images/S_kilarney1.jpg");
+	  background-repeat: no-repeat;
+	  background-size:cover;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  z-index: -1;
+	  opacity: 0.1; 
+	}
+	h2 {
+		color:$navy;
+		}
+	.wrapper {
+		display:flex;
+		justify-content:space-between;
+	}
+}
+
+.service {
+	background:$extralightgrey;
+	padding:40px;
+	width:30%;
+	transition: all .3s;
+	&:hover {
+		box-shadow: 0 0 20px $midgrey;
+		color: black;
+	}
+	a button {
+		border:none;
+		margin: 20px 0;
+		background: $navy;
+		color:$white;
+		border: 3px solid $navy;
+		transition: all.3s;
+		font-weight: 500;
+		padding: 5px 30px;
+		&:hover {
+				background: rgba(0,0,0,.0);
+				color: $navy;	
+		}
+	}
+}
+
+
+.all-clients {
+	flex-wrap:wrap;
+	justify-content:space-between;
+	 .client-info{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		p{
+			margin-right: 80px;
+		}
+	}
+}
+
+section.blog {
+	background: $navy;
+	h2{
+		color:$extralightgrey;
+		a {
+			color: $darkgrey;
+		}
+	}
+	.button{
+		margin-top:40px;
+	}
+
+}
+
+article:nth-child(even) .blog-post {
+	margin-right: calc(50% - 360px);
+}
+
+article:first-child .blog-post{
+	display: block;
+	padding:60px;
+	width:100%;
+	margin: 0 0 50px 0;
+	h2{
+		margin-top: 0;
+	}
+	.blog-post-image {
+		width:50%;
+		margin: 0 0 40px 20px;
+		float:right;
+	}
+}
+
+.blog-post {
+	width:45%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	background:$white;
+	padding:20px;
+	float:left;
+	box-shadow: 0 0 5px black;
+	h2{
+		text-align: left;
+		transition: all.3s;
+			&:after {
+				content:"";
+				display:block;
+				background:$lightgrey;
+				width:100px;
+				height:5px;
+				margin-top:15px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+	}
+	.continue{
+		color:$darkgrey;
+		text-decoration: underline;
+		&:hover{
+			font-weight: 500;
+		}
+	}
+}
+
+section.downloads {
+	background: $lightgrey;
+
+}
+
+.download {
+	display:flex;
+	flex-direction:column;
+	padding:20px;
+	margin-bottom: 40px;
+	background: $white;
+	box-shadow: 0 0 5px rgba(0,0,0,.15);
+	form{
+		margin: 0 auto;
+	}
+	form input {
+		width:300px;
+		margin:5px 20px;
+		background: $white;
+		border:3px solid $navy;
+		padding: 2px 5px;
+	}
+	input.submit{
+		background: $white;
+		font-weight: 500;
+		color:$white;
+		transition: all .3s;
+		border:3px solid $navy;
+		background-color: $navy;
+		&:hover {
+			color: $navy;
+			background: $white;
+		}
+	}
+}
+
+section.contact {
+	color:$white;
+	position: relative;
+ 	 background: rgba(34, 39, 44,.8);
+	&:after {
+  		content: "";
+	  	position: absolute;
+	  	background-image: url("images/S_kilarney2.jpg");
+	  	background-size: cover;
+	  	top: 0;
+	  	left: 0;
+	  	right: 0;
+	  	bottom: 0;
+	  	z-index: -1;
+	}
+	.contact-me {
+		font-size: 1.6rem;
+		.contact-phone {
+			margin-top: 80px;
+		}
+		.contact-email a{
+			margin-bottom: 50px;
+			color:$white;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.contact-phone, .contact-email a{
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			i {
+				margin-right:10px;
+			}
+		}
+	}
+	form {
+		display:flex;
+		flex-direction:column;
+		padding:20px;
+		input, textarea {
+			width:500px;
+			margin: 5px auto;
+			padding: 0 10px;
+			display:inline;
+			border:none;
+		}
+		input {
+			height:50px;
+
+		}
+		input::-webkit-input-placeholder {
+			color:$darkgrey;
+			opacity: 1; 
+			transition: opacity 0.6s ease;
+		}
+	  
+	  input:focus::-webkit-input-placeholder {
+		  	opacity: 0; 
+		  	transition: opacity 0.6s ease;
+		  }
+	  textarea::-webkit-input-placeholder{
+		  	opacity: 1; 
+		  	transition: opacity 0.6s ease;
+		  }
+	  
+	  textarea:focus::-webkit-input-placeholder {
+		  	opacity: 0; 
+		  	transition: opacity 0.6s ease;
+		  }
+	  textarea {
+			height:200px;
+			padding-top: 10px;
+		}
+		textarea::-webkit-input-placeholder {
+				color:$darkgrey;
+			}
+		input[type=submit]{
+			border:none;
+			margin: 20px auto;
+			background: $navy;
+			color:$white;
+			border: 3px solid $white;
+			transition: all.3s;
+			font-weight: 500;
+			padding: 5px 30px;
+			&:hover {
+					background: $white;
+					color: $navy;
+
+			}
+		}
+	} 
+}
+
+ 	
+
+footer {
+	text-align: center;
+	a{
+		color: $midgrey;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.service-page {
+	padding:80px 0;
+	.button a button {
+		margin: 50px 0;
+		font-size: 1.2rem;
+		border: 3px solid $navy;
+		&:hover{
+			background-color: $extralightgrey;
+		}
+
+		}
+
+}
+
+.category-page, .single-page {
+	padding: 80px 0;
+	h1 {
+		margin-bottom: 80px;
+	}
+	article{
+		background:$white;
+		padding:40px;
+		box-shadow: 0 0 5px rgba(0,0,0,.15);
+		margin-bottom: 40px;
+		section.entry-content{ padding:20px 0;
+		}
+	}
+	a{
+		color:$darkgrey;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	div.entry-meta{
+		margin-bottom:20px;
+	}
+	div.entry-content{
+		padding: 40px;
+		background:$white;
+		box-shadow: 0 0 5px rgba(0,0,0,.15);
+		margin-bottom:20px;
+		img{
+			box-shadow: 0 0 5px rgba(0,0,0,.15);
+
+		}
+		
+	}
+}
+
+.page-four {
+	min-height: 100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+		.button a button {
+		margin: 50px 0;
+		font-size: 1.2rem;
+		border: 3px solid $navy;
+		&:hover{
+			background-color: $extralightgrey;
+		}
+
+		}
+}
+

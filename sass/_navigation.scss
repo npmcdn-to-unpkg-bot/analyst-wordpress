@@ -1,0 +1,28 @@
+ul.menu {
+	margin: 0;
+	padding: 0px;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+
+
+	li {
+		
+		margin-left: 10px;
+		list-style: none;
+
+		a {
+			// color: #333;
+			padding: 10px;
+			// background: #333;
+			color: $darkgrey;
+			font-size: .875rem;
+			&:hover{
+				color:black;
+			}
+
+
+			
+		}
+	}
+}
